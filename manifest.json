@@ -1,0 +1,44 @@
+{
+  "name": "Yes Octobi Wan Catnobi this is the page I am looking for",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "TODO",
+  "homepage_url": "http://github.com/arrayjam",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "webRequestBlocking",
+    "webRequest",
+    "*://github.com/*/*"
+  ],
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://github.com/new"
+      ],
+      "js": [
+        "src/inject/new.js"
+      ]
+    }
+  ]
+}
