@@ -11,14 +11,14 @@
   },
   "default_locale": "en",
   "permissions": [
-    "webRequestBlocking",
     "webRequest",
     "*://github.com/*/*"
   ],
   "background": {
     "scripts": [
       "src/bg/background.js"
-    ]
+    ],
+    "persistent": true
   },
   "content_scripts": [
     {
