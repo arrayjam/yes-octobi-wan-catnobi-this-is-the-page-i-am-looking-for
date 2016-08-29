@@ -19,9 +19,12 @@ if (nameAndOwnerChunks.length === 2) {
         }
     });
 }
-var ownerButton = document.querySelector(".js-owner-container .js-menu-target");
-ownerButton.click();
-var ownerChoice = document.querySelector("input[name=\"owner\"][value=\"" + result.owner + "\"]");
-ownerChoice.click();
-var input = document.querySelector("[name='repository[name]']");
-input.value = result.name;
+if (result.name !== "" && result.owner !== "") {
+    var ownerButton = document.querySelector(".js-owner-container .js-menu-target");
+    ownerButton.click();
+    var ownerChoice = document.querySelector("input[name=\"owner\"][value=\"" + result.owner + "\"]");
+    ownerChoice.click();
+    var input = document.querySelector("[name='repository[name]']");
+    input.value = result.name;
+    window.location.hash = "";
+}

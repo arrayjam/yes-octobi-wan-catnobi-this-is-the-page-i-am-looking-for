@@ -30,11 +30,15 @@ if (nameAndOwnerChunks.length === 2) {
     });
 }
 
-let ownerButton = document.querySelector(".js-owner-container .js-menu-target") as HTMLElement;
-ownerButton.click();
+if (result.name !== "" && result.owner !== "") {
+    let ownerButton = document.querySelector(".js-owner-container .js-menu-target") as HTMLElement;
+    ownerButton.click();
 
-let ownerChoice = document.querySelector(`input[name="owner"][value="${result.owner}"]`) as HTMLElement;
-ownerChoice.click();
+    let ownerChoice = document.querySelector(`input[name="owner"][value="${result.owner}"]`) as HTMLElement;
+    ownerChoice.click();
 
-let input = document.querySelector("[name='repository[name]']") as HTMLInputElement;
-input.value = result.name;
+    let input = document.querySelector("[name='repository[name]']") as HTMLInputElement;
+    input.value = result.name;
+
+    window.location.hash = "";
+}

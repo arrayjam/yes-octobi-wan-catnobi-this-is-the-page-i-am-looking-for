@@ -10,7 +10,7 @@ chrome.webRequest.onCompleted.addListener(response => {
         const matches = possibleRepoRegex.exec(response.url);
         if (matches === null) return;
         if (matches.length === 3) {
-            const message = {
+            const message: RepoDetails = {
                 owner: matches[1],
                 name: matches[2],
             };
@@ -23,7 +23,7 @@ chrome.webRequest.onCompleted.addListener(response => {
 }, { urls: ["https://github.com/*/*"] });
 
 chrome.tabs.onUpdated.addListener((tabId, info) => {
-    console.log("updated");
+    console.log("updated", info.status);
     console.log(tabToMessage, tabId);
     if (info.status === "complete" && tabId in tabToMessage) {
         console.log("sending");
