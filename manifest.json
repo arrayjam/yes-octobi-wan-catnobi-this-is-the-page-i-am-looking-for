@@ -2,7 +2,7 @@
   "name": "Yes Octobi Wan Catnobi this is the page I am looking for",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Add a create repo button from github 404 pages.",
+  "description": "Add a create repo button on github 404 pages.",
   "homepage_url": "http://github.com/arrayjam",
   "icons": {
     "16": "icons/icon16.png",

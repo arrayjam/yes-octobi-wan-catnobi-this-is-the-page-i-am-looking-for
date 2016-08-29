@@ -17,10 +17,7 @@ chrome.webRequest.onCompleted.addListener(function (response) {
     }
 }, { urls: ["https://github.com/*/*"] });
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
-    console.log("updated", info.status);
-    console.log(tabToMessage, tabId);
     if (info.status === "complete" && tabId in tabToMessage) {
-        console.log("sending");
         tabToMessage[tabId]();
     }
 });

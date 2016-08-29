@@ -1,17 +1,21 @@
 {
   "name": "yes-octobi-wan-catnobi-this-is-the-page-i-am-looking-for",
   "version": "1.0.0",
-  "description": "",
+  "description": "Add a create repo button on github 404 pages.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "tsc --watch src/**/*.ts",
+    "compile": "tsc src/**/*.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arrayjam/yes-octobi-wan-catnobi-this-is-the-page-i-am-looking-for.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Yuri Feldman",
+    "url": "https://github.com/arrayjam"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/arrayjam/yes-octobi-wan-catnobi-this-is-the-page-i-am-looking-for/issues"
   },

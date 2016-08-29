@@ -23,10 +23,7 @@ chrome.webRequest.onCompleted.addListener(response => {
 }, { urls: ["https://github.com/*/*"] });
 
 chrome.tabs.onUpdated.addListener((tabId, info) => {
-    console.log("updated", info.status);
-    console.log(tabToMessage, tabId);
     if (info.status === "complete" && tabId in tabToMessage) {
-        console.log("sending");
         tabToMessage[tabId]();
     }
 });
