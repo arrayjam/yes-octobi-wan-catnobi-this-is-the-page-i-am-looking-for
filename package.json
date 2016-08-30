@@ -4,8 +4,8 @@
   "description": "Add a create repo button on github 404 pages.",
   "main": "index.js",
   "scripts": {
-    "run": "tsc --watch src/**/*.ts",
-    "compile": "tsc src/**/*.ts"
+    "run": "tsc --outDir extension --watch src/**/*.ts",
+    "compile": "tsc --outDir extension src/**/*.ts"
   },
   "repository": {
     "type": "git",

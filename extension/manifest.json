@@ -19,7 +19,7 @@
   ],
   "background": {
     "scripts": [
-      "src/bg/background.js"
+      "bg/background.js"
     ],
     "persistent": true
   },
@@ -29,7 +29,7 @@
         "https://github.com/*/*"
       ],
       "js": [
-        "src/inject/repo_check.js"
+        "inject/repo_check.js"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "https://github.com/new"
       ],
       "js": [
-        "src/inject/new.js"
+        "inject/new.js"
       ]
     }
   ]
