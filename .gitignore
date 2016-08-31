@@ -1,1 +1,5 @@
 node_modules/
+key.pem
+
+# TODO(yuri): Remove later so that releases can have the crx
+*.crx

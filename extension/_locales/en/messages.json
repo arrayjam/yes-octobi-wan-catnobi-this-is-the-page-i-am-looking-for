@@ -1,6 +1,6 @@
 {
   "new_repo_button": {
-    "message": "✨✨✨ Let's make $repo$ happen ✨✨✨",
+    "message": "Let's make $repo$ happen",
     "description": "Button on 404 repo page.",
     "placeholders": {
       "repo": {

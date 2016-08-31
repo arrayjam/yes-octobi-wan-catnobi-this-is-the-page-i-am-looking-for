@@ -16,8 +16,9 @@ chrome.webRequest.onCompleted.addListener(function (response) {
         }
     }
 }, { urls: ["https://github.com/*/*"] });
-chrome.tabs.onUpdated.addListener(function (tabId, info) {
-    if (info.status === "complete" && tabId in tabToMessage) {
+chrome.tabs.onUpdated.addListener(function (tabId) {
+    if (tabId in tabToMessage) {
         tabToMessage[tabId]();
+        delete tabToMessage[tabId];
     }
 });

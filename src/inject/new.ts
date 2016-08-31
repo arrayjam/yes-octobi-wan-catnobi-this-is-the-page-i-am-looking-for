@@ -40,5 +40,5 @@ if (result.name !== "" && result.owner !== "") {
     let input = document.querySelector("[name='repository[name]']") as HTMLInputElement;
     input.value = result.name;
 
-    window.location.hash = "";
+    if (history && history.replaceState) history.replaceState(null, undefined, "#");
 }

@@ -26,5 +26,6 @@ if (result.name !== "" && result.owner !== "") {
     ownerChoice.click();
     var input = document.querySelector("[name='repository[name]']");
     input.value = result.name;
-    window.location.hash = "";
+    if (history && history.replaceState)
+        history.replaceState(null, undefined, "#");
 }

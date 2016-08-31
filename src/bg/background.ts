@@ -22,8 +22,9 @@ chrome.webRequest.onCompleted.addListener(response => {
     }
 }, { urls: ["https://github.com/*/*"] });
 
-chrome.tabs.onUpdated.addListener((tabId, info) => {
-    if (info.status === "complete" && tabId in tabToMessage) {
+chrome.tabs.onUpdated.addListener(tabId => {
+    if (tabId in tabToMessage) {
         tabToMessage[tabId]();
+        delete tabToMessage[tabId];
     }
 });

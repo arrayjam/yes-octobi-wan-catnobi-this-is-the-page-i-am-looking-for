@@ -4,8 +4,9 @@
   "description": "Add a create repo button on github 404 pages.",
   "main": "index.js",
   "scripts": {
-    "run": "tsc --outDir extension --watch src/**/*.ts",
-    "compile": "tsc --outDir extension src/**/*.ts"
+    "watch": "tsc --outDir extension --watch src/**/*.ts",
+    "compile": "tsc --outDir extension src/**/*.ts",
+    "package": "npm run compile && /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --pack-extension=./extension --pack-extension-key=./key.pem"
   },
   "repository": {
     "type": "git",
