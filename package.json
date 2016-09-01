@@ -1,12 +1,13 @@
 {
-  "name": "yes-octobi-wan-catnobi-this-is-the-page-i-am-looking-for",
+  "name": "yes-this-is-the-page-i-am-looking-for",
   "version": "1.0.0",
   "description": "Add a create repo button on github 404 pages.",
   "main": "index.js",
   "scripts": {
     "watch": "tsc --outDir extension --watch src/**/*.ts",
     "compile": "tsc --outDir extension src/**/*.ts",
-    "package": "npm run compile && /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --pack-extension=./extension --pack-extension-key=./key.pem"
+    "package": "npm run compile && /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --pack-extension=./extension --pack-extension-key=./key.pem",
+    "preupload": "npm run package && cp key.pem extension && zip -r octobi-wan-catnobi extension/* && rm extension/key.pem"
   },
   "repository": {
     "type": "git",
